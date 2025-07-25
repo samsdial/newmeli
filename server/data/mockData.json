@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "MLA1",
+      "title": "iPhone 13 Pro Max",
+      "price": {
+        "amount": 1299.99,
+        "currency": "USD"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_686140-MLA46114829828_052021-F.webp",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA2",
+      "title": "Samsung Galaxy S21 Ultra",
+      "price": {
+        "amount": 1199.99,
+        "currency": "USD"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_648793-MLA44282592285_122020-F.webp",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA3",
+      "title": "MacBook Pro 16 M1 Pro",
+      "price": {
+        "amount": 2499.99,
+        "currency": "USD"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_801112-MLA47933193198_102021-F.webp",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA4",
+      "title": "iPad Pro 12.9 M1",
+      "price": {
+        "amount": 1099.99,
+        "currency": "USD"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_839371-MLA46975157920_082021-F.webp",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA5",
+      "title": "AirPods Pro",
+      "price": {
+        "amount": 249.99,
+        "currency": "USD"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_816862-MLA46302470623_062021-F.webp",
+      "condition": "new",
+      "free_shipping": false
+    }
+  ],
+  "categories": ["Electrónica", "Celulares y Smartphones"]
+}
