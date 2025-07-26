@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import SearchBox from "../components/SearchBox";
+import React, { useEffect } from "react";
 
 const HomePage = () => {
-  const navigate = useNavigate();
-  console.log("navigate", navigate);
-  const [searchQuery, setSearchQuery] = useState("");
-
-  console.log("searchQuery:.", searchQuery);
-
   useEffect(() => {
     const alreadyVisited = localStorage.getItem("visited");
     if (!alreadyVisited) {
@@ -17,31 +9,21 @@ const HomePage = () => {
     }
   }, []);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/items?search=${encodeURIComponent(searchQuery)}`);
-    }
-  };
-
-  const handleInputChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
-
   return (
-    <div className="home-page">
-      <div className="home-page__header">
-        <h1>Mercado Libre</h1>
-        <p>
-          Encuentra los mejores productos en Mercado Libre.
-        </p>
+    <>
+      <div className="slider">
+        <div className="slider__bg"/>
       </div>
-      <SearchBox
-        value={searchQuery}
-        onChange={handleInputChange}
-        onSubmit={handleSearch}
-      />
-    </div>
+      <div className="home-page">
+        <div className="home-page__header">
+          <h1>Mercado Libre</h1>
+          <p>Encuentra los mejores productos en Mercado Libre.</p>
+        </div>
+        <div className="home-page__content">
+          {/* Contenido principal de la home page */}
+        </div>
+      </div>
+    </>
   );
 };
 

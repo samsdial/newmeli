@@ -1,0 +1,151 @@
+/* Definición de fuentes */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/Fontspring-DEMO-proximanova-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/Fontspring-DEMO-proximanova-light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../assets/fonts/Fontspring-DEMO-proximanova-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Main color*/
+:root {
+  /* Colores principales */
+  --background: #F8F3F5;
+  --background-elevation: #ffe600;
+  --brand-main: #F1B7F2;
+  
+  /* Botones */
+  --button-primary: #24B4FA;
+  --button-secondary: rgba(36, 180, 250, 0.1);
+  
+  /* Textos */
+  --text-dark: #35S5S5;
+  --text-white: rgba(52, 180, 250, 0.1);
+  --text-gray-200: #BFBFBF;
+  --text-gray-300: #F0D0D0;
+
+  /* border */
+  --border-gray-300: #e6e6e6;
+
+  
+  /* Semánticos */
+  --semantic-green: #06A6S0;
+  --semantic-caution: #EET646;
+  --semantic-negative: #JDF4054;
+  
+
+  --primary: var(--button-primary);
+  --secondary: var(--text-gray-200);
+  --white: #FFFFFF;
+  --black: #000000;
+  --button-primary-rgba: rgba(36, 180, 250, 0.8);
+  --brand-main-rgba: rgba(241, 183, 242, 0.8);
+  
+  /* Fuente (mantenida de la configuración anterior) */
+  --font-primary: 'Proxima Nova', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+
+html,
+body {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--black);
+  font-weight: 400;
+  overflow-x: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+}
+
+div,
+span,
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+select {
+  appearance: none;
+  outline: none;
+}
+
+.select-block {
+  position: relative;
+
+  >.arrow-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+  border: 1px solid transparent;
+  transition: border-color ease 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--black);
+}
+
+input[type="file"] {
+  outline: none;
+  border: none !important;
+
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+}
+
+button[type="submit"] {
+  border: none ;
+  outline: none ;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-medium {
+  font-weight: 500 !important;
+}
+
+.text-light {
+  font-weight: 300 !important;
+}

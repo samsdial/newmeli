@@ -1,0 +1,35 @@
+.header {
+  background-color: var(--background-elevation);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-wrap: wrap;
+    gap: 120px;
+  }
+
+  &__logo {
+    flex: 0 0 134px;
+    text-align: left;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+}
