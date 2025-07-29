@@ -1,18 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
+import SEO from "../components/SEO";
 
 const HomePage = () => {
-  useEffect(() => {
-    const alreadyVisited = localStorage.getItem("visited");
-    if (!alreadyVisited) {
-      alert("¡Bienvenido a Mercado Libre!");
-      localStorage.setItem("visited", "true");
-    }
-  }, []);
-
   return (
     <>
+      <SEO
+        title="Mercado Libre Colombia - Envíos Gratis en el día"
+        description="Comprá productos con Envío Gratis en el día en Mercado Libre Colombia. Encontrá miles de marcas y productos a precios increíbles."
+        keywords="mercado libre, compras online, envío gratis, productos, ofertas, colombia"
+        image="/assets/images/logo_meli.png"
+        url={window.location.href}
+        type="website"
+      />
       <div className="slider">
-        <div className="slider__bg"/>
+        <div className="slider__bg" />
       </div>
       <div className="home-page">
         <div className="home-page__header">

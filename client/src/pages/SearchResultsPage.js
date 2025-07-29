@@ -12,16 +12,15 @@ const SearchResultsPage = () => {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
-    const query = searchParams.get("search") || ""; // Permitir búsqueda vacía
+    const query = searchParams.get("search") || "";
     const page = searchParams.get("page") || 1;
 
     setLoading(true);
     setError(null);
 
-    // Construir URL - si no hay query, traer todos los productos
     const apiUrl = query.trim()
-      ? `http://localhost:3001/api/items?q=${query}&page=${page}`
-      : `http://localhost:3001/api/items?page=${page}`;
+      ? `/api/items?q=${query}&page=${page}`
+      : `/api/items?page=${page}`;
 
     axios
       .get(apiUrl)
@@ -53,7 +52,6 @@ const SearchResultsPage = () => {
   const searchParams = new URLSearchParams(location.search);
   const searchQuery = searchParams.get("search");
 
-  // Validaciones defensivas para paginación
   const pagination = results.pagination || {};
   const totalItems = pagination.total_items || results.items.length || 0;
   const currentPage = pagination.current_page || 1;
