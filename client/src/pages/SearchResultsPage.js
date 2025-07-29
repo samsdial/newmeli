@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Breadcrumb from "../components/Breadcrumb";
+import Pagination from "../components/Pagination";
 import ProductList from "../components/ProductList";
 
 const SearchResultsPage = () => {
@@ -12,33 +12,81 @@ const SearchResultsPage = () => {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
-    const query = searchParams.get("search");
+    const query = searchParams.get("search") || ""; // Permitir búsqueda vacía
+    const page = searchParams.get("page") || 1;
 
-    if (query) {
-      axios
-        .get(`http://localhost:3001/api/items?q=${query}`)
-        .then((response) => {
-          setResults(response.data);
-          setLoading(false);
-        })
-        .catch((err) => {
-          setError(err.message);
-          setLoading(false);
-        });
-    }
+    setLoading(true);
+    setError(null);
+
+    // Construir URL - si no hay query, traer todos los productos
+    const apiUrl = query.trim()
+      ? `http://localhost:3001/api/items?q=${query}&page=${page}`
+      : `http://localhost:3001/api/items?page=${page}`;
+
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setResults(response.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
   }, [location.search]);
-
-  console.log("SearchResultsPage", results);
 
   if (loading) return <div>Cargando...</div>;
   if (error) return <div>Error: {error}</div>;
+  if (!results || !results.items || results.items.length === 0) {
+    return (
+      <div className="container">
+        <div className="container-search mt-30">
+          <div className="no-results">
+            <h2>No se encontraron resultados</h2>
+            <p>Intenta con otros términos de búsqueda.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const searchParams = new URLSearchParams(location.search);
+  const searchQuery = searchParams.get("search");
+
+  // Validaciones defensivas para paginación
+  const pagination = results.pagination || {};
+  const totalItems = pagination.total_items || results.items.length || 0;
+  const currentPage = pagination.current_page || 1;
+  const totalPages = pagination.total_pages || 1;
 
   return (
-    <div className="search-results">
-      <Breadcrumb categories={results.categories} />
-      <ProductList items={results.items} />
+    <div className="container">
+      <div className="container-search mt-30">
+        <div className="search-results__header">
+          <h1 className="search-results__title">
+            {searchQuery
+              ? `Resultados de búsqueda para "${searchQuery}"`
+              : "Todos los productos"}
+          </h1>
+          <p className="search-results__count">
+            {totalItems} resultado
+            {totalItems !== 1 ? "s" : ""} encontrado
+            {totalItems !== 1 ? "s" : ""}
+          </p>
+        </div>
+
+        <ProductList items={results.items} />
+
+        {pagination && totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            searchQuery={searchQuery}
+          />
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default SearchResultsPage;

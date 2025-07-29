@@ -3,24 +3,123 @@ const fs = require("fs");
 const path = require("path");
 
 const mockDataPath = path.join(__dirname, "../data/mockData.json");
-const mockItemDetailsPath = path.join(__dirname, "../data/mockItemDetails.json");
+const mockItemDetailsPath = path.join(
+  __dirname,
+  "../data/mockItemDetails.json"
+);
 
 const searchItems = async (req, res) => {
   try {
-    //const { q: query, offset = 0 } = req.query;
-    //const response = await axios.get(
-      //`https://api.mercadolibre.com/sites/MLA/search?q=${query}&offset=${offset}`
-    //);
+    const { q: query, page = 1 } = req.query;
+    const itemsPerPage = 10; // Cambiar de 4 a 10 items por página
+    const currentPage = parseInt(page, 10);
+    const offset = (currentPage - 1) * itemsPerPage;
 
-    //const formattedData = formatSearchResults(response.data);
+    console.log("Backend received:", {
+      query,
+      page,
+      currentPage,
+      itemsPerPage,
+    }); // Debug
 
-    //res.json(formattedData);
     setTimeout(() => {
-      const mockData = JSON.parse(fs.readFileSync(mockDataPath));
-      res.json(mockData);
+      try {
+        const mockData = JSON.parse(fs.readFileSync(mockDataPath));
+        const allItems = mockData.items || [];
+
+        console.log("Total items in mock data:", allItems.length); // Debug
+
+        // Simular filtrado por query si se proporciona y no está vacía
+        let filteredItems = allItems;
+        if (query && query.trim() !== "") {
+          filteredItems = allItems.filter(
+            (item) =>
+              item.title.toLowerCase().includes(query.toLowerCase()) ||
+              item.seller.toLowerCase().includes(query.toLowerCase())
+          );
+          console.log(
+            "Filtered items for query:",
+            query,
+            "→",
+            filteredItems.length
+          ); // Debug
+        } else {
+          console.log("No query provided, showing all items"); // Debug
+        }
+
+        // Calcular paginación
+        const totalItems = filteredItems.length;
+        const totalPages = Math.max(1, Math.ceil(totalItems / itemsPerPage));
+        const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages);
+        const validOffset = (validCurrentPage - 1) * itemsPerPage;
+        const paginatedItems = filteredItems.slice(
+          validOffset,
+          validOffset + itemsPerPage
+        );
+
+        console.log("Pagination calculation:", {
+          totalItems,
+          itemsPerPage,
+          totalPages,
+          validCurrentPage,
+          validOffset,
+          paginatedItemsCount: paginatedItems.length,
+          mathCeilCheck: Math.ceil(totalItems / itemsPerPage),
+        }); // Debug mejorado
+
+        // Formatear respuesta con información de paginación (siempre incluida)
+        const response = {
+          items: paginatedItems,
+          categories: mockData.categories || [],
+          pagination: {
+            current_page: validCurrentPage,
+            total_pages: totalPages,
+            total_items: totalItems,
+            items_per_page: itemsPerPage,
+            has_next_page: validCurrentPage < totalPages,
+            has_prev_page: validCurrentPage > 1,
+            next_page:
+              validCurrentPage < totalPages ? validCurrentPage + 1 : null,
+            prev_page: validCurrentPage > 1 ? validCurrentPage - 1 : null,
+          },
+        };
+
+        console.log("Sending response pagination:", response.pagination); // Debug
+        res.json(response);
+      } catch (fileError) {
+        console.error("Error reading mock data:", fileError);
+        res.status(500).json({
+          error: "Error reading data",
+          items: [],
+          pagination: {
+            current_page: 1,
+            total_pages: 1,
+            total_items: 0,
+            items_per_page: itemsPerPage,
+            has_next_page: false,
+            has_prev_page: false,
+            next_page: null,
+            prev_page: null,
+          },
+        });
+      }
     }, 300);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error("Search items error:", error);
+    res.status(500).json({
+      error: error.message,
+      items: [],
+      pagination: {
+        current_page: 1,
+        total_pages: 1,
+        total_items: 0,
+        items_per_page: 10,
+        has_next_page: false,
+        has_prev_page: false,
+        next_page: null,
+        prev_page: null,
+      },
+    });
   }
 };
 

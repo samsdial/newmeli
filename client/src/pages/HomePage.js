@@ -16,11 +16,9 @@ const HomePage = () => {
       </div>
       <div className="home-page">
         <div className="home-page__header">
-          <h1>Mercado Libre</h1>
+          <h1>Mercado Libre - test</h1>
           <p>Encuentra los mejores productos en Mercado Libre.</p>
-        </div>
-        <div className="home-page__content">
-          {/* Contenido principal de la home page */}
+          <p>Sergio Martinez - Front End Developer.</p>
         </div>
       </div>
     </>

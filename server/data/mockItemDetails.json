@@ -9,13 +9,18 @@
     },
     "pictures": [
       {
-        "url": "https://http2.mlstatic.com/D_NQ_NP_2X_686140-MLA46114829828_052021-F.webp"
+        "src": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+        "type": "image"
       },
       {
-        "url": "https://http2.mlstatic.com/D_NQ_NP_2X_686140-MLA46114829828_052021-V.webp"
+        "src": "https://http2.mlstatic.com/D_NQ_NP_738995-MLU78891932022_092024-O.webp",
+        "type": "image"
       }
     ],
+    "free_shipping": true,
     "condition": "new",
+    "color": "Blanco",
+    "seller": "Apple",
     "sold_quantity": 150,
     "description": "El iPhone 13 Pro Max es el smartphone más avanzado de Apple hasta la fecha. Cuenta con una pantalla Super Retina XDR de 6.7 pulgadas con ProMotion, un sistema de cámaras Pro de 12MP con nuevos gran angular, ultra gran angular y teleobjetivo, chip A15 Bionic para un rendimiento ultrarrápido y hasta 28 horas de reproducción de video.",
     "category_path_from_root": [

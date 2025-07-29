@@ -3,8 +3,13 @@
 @use 'search.scss';
 @use 'navigation.scss';
 @use 'slider.scss';
+@use 'productList.scss';
+@use 'breadcrumb.scss';
+@use 'product.scss';
+@use 'productGallery.scss';
+@use 'pagination.scss';
 
-// App layout styles
+
 .app {
   min-height: 100vh;
   display: flex;

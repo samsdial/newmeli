@@ -1,7 +1,7 @@
 /* Definición de fuentes */
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../assets/fonts/Fontspring-DEMO-proximanova-regular.otf') format('opentype');
+  src: url('../assets/fonts/proximanova_regular.ttf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+  src: url('../assets/fonts/proximanova_bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../assets/fonts/Fontspring-DEMO-proximanova-light.otf') format('opentype');
+  src: url('../assets/fonts/proximanova_light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../assets/fonts/Fontspring-DEMO-proximanova-medium.otf') format('opentype');
+  src: url('../assets/fonts/proximanova_light.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,8 @@
   --brand-main: #F1B7F2;
   
   /* Botones */
-  --button-primary: #24B4FA;
+  --button-primary: #3483fa;
+  --button-primary-hover: #2968c8;
   --button-secondary: rgba(36, 180, 250, 0.1);
   
   /* Textos */
@@ -61,12 +62,26 @@
   --primary: var(--button-primary);
   --secondary: var(--text-gray-200);
   --white: #FFFFFF;
+  --gray: #f5f5f5;
   --black: #000000;
+  --green: #00a650;
   --button-primary-rgba: rgba(36, 180, 250, 0.8);
   --brand-main-rgba: rgba(241, 183, 242, 0.8);
+  --body-color: #ededed;
+  --border-list-color: #eee;
+  --border-color: #2d9cdb;
+  /* card */
+  --card-image-size: 259px;
+  --card-padding: 12px;
   
-  /* Fuente (mantenida de la configuración anterior) */
+  /* Fuente  */
   --font-primary: 'Proxima Nova', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-alt: "Tahoma", Arial, sans-serif
+  --font-general: 14px;
+  --card-general-title: 20px;
+  --card-general-text: 16px;
+  --card-general-shipping: 14px;
+  --card-general-line-height: 1.5;
 }
 
 * {
@@ -87,19 +102,39 @@ body {
   user-select: none;
   scroll-behavior: smooth;
   font-family: var(--font-primary);
+  background-color: var(--body-color);
 }
 
 div,
-span,
 p {
   font-size: 16px;
   line-height: 26px;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
 }
 
 select {
   appearance: none;
   outline: none;
 }
+main[role=main] {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 300px;
+  line-height: 1.35;
+}
+[role=main] {
+  height: 100%;
+  display: table-row;
+  width: 100%;
+}
+
+
 
 .select-block {
   position: relative;
@@ -109,6 +144,31 @@ select {
     top: 50%;
     transform: translateY(-50%);
     right: 16px;
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  width: 100%;
+  &-search {
+    max-width: 1200px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    &__results {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+.search-results__list {
+  li{
+    border-bottom: thin solid var(--border-list-color);
   }
 }
 
@@ -133,9 +193,99 @@ input[type="file"] {
   }
 }
 
+ol {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--button-primary);
+  transition: color .2 ease-in-out;
+}
+button {
+  appearance: auto;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0em;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+}
+.btn-loud {
+  background-color: var(--andes-color-blue-500, #3483fa);
+  border-color: transparent;
+  color: #fff;
+  &:hover {
+    background-color: var(--andes-color-blue-600, #2968c8);
+    border-color: transparent;
+    color: #fff;
+  }
+}
+.btn-quiet {
+  background-color: var(--andes-color-blue-150, rgba(65, 137, 230, .15));
+  border-color: transparent;
+  color: var(--andes-color-blue-500, #3483fa);
+  &:hover {
+    background-color: var(--andes-color-blue-200, rgba(65, 137, 230, .2));
+    border-color: transparent;
+    color: var(--andes-color-blue-500, #3483fa);
+  }
+}
+
 button[type="submit"] {
   border: none ;
   outline: none ;
+}
+
+.subtitle {
+  color: rgba(0, 0, 0, .55);
+  font-size: 14px;
+  font-weight: 400;
+  white-space: pre-wrap;
+  &-line {
+    font-size: 14px;
+  }
+  &-plus {
+    font-size: 14px;
+  }
+  &-green {
+    color: var(--green);
+    font-size: 14px;
+  }
+}
+.title {
+    flex: auto;
+    font-size: 22px;
+    color: rgba(0, 0, 0, .9);
+    font-size: 22px;
+    font-weight: 500;
+    hyphens: auto;
+    line-height: 1;
+    padding-right: 10px;
+    word-break: break-word;
+}
+.seller {
+  color: rgba(0, 0, 0, .55);
+  font-size: 14px;
 }
 
 .text-bold {
@@ -149,3 +299,53 @@ button[type="submit"] {
 .text-light {
   font-weight: 300 !important;
 }
+// margin
+.mr-4{
+  margin-right: 4px;
+}
+.ml-4{
+  margin-left: 4px;
+}
+.mr-24{
+  margin-right: 24px;
+}
+.ml-24{
+  margin-left: 24px;
+}
+.mt-24{
+  margin-top: 24px;
+}
+.mb-24{
+  margin-bottom: 24px;
+}
+.mt-28{
+  margin-top: 28px;
+}
+.mb-28{
+  margin-bottom: 28px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+// padding
+.pr-24 {
+  padding-right: 24px;
+}
+.pl-24 {
+  padding-left: 24px;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+//order in mobile
+@media (max-width: 500px) {
+  .order-none{
+    order: 0;
+  }
+  .order-1{
+    order: 1;
+  }
+  .order-2{
+    order: 2;
+  }
+ }

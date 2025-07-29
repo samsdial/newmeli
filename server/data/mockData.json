@@ -5,10 +5,11 @@
       "title": "iPhone 13 Pro Max",
       "price": {
         "amount": 1299.99,
-        "currency": "USD"
+        "currency": "COL"
       },
-      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_686140-MLA46114829828_052021-F.webp",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
       "condition": "new",
+      "seller": "Apple",
       "free_shipping": true
     },
     {
@@ -16,21 +17,23 @@
       "title": "Samsung Galaxy S21 Ultra",
       "price": {
         "amount": 1199.99,
-        "currency": "USD"
+        "currency": "COL"
       },
-      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_648793-MLA44282592285_122020-F.webp",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
       "condition": "new",
+      "seller": "Samsung",
       "free_shipping": true
     },
     {
       "id": "MLA3",
       "title": "MacBook Pro 16 M1 Pro",
       "price": {
-        "amount": 2499.99,
-        "currency": "USD"
+        "amount": 2599.99,
+        "currency": "COL"
       },
-      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_801112-MLA47933193198_102021-F.webp",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
       "condition": "new",
+      "seller": "Apple",
       "free_shipping": true
     },
     {
@@ -38,23 +41,696 @@
       "title": "iPad Pro 12.9 M1",
       "price": {
         "amount": 1099.99,
-        "currency": "USD"
+        "currency": "COL"
       },
-      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_839371-MLA46975157920_082021-F.webp",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
       "condition": "new",
+      "seller": "Apple",
       "free_shipping": true
     },
     {
       "id": "MLA5",
       "title": "AirPods Pro",
       "price": {
-        "amount": 249.99,
-        "currency": "USD"
+        "amount": 259.99,
+        "currency": "COL"
       },
-      "picture": "https://http2.mlstatic.com/D_NQ_NP_2X_816862-MLA46302470623_062021-F.webp",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
       "condition": "new",
+      "seller": "Apple",
       "free_shipping": false
+    },
+    {
+      "id": "MLA6",
+      "title": "Nintendo Switch OLED",
+      "price": {
+        "amount": 349.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Nintendo",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA7",
+      "title": "Sony PlayStation 5",
+      "price": {
+        "amount": 499.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Sony",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA8",
+      "title": "Xbox Series X",
+      "price": {
+        "amount": 499.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Microsoft",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA9",
+      "title": "Dell XPS 13 Laptop",
+      "price": {
+        "amount": 1299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Dell",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA10",
+      "title": "Surface Pro 8",
+      "price": {
+        "amount": 1099.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Microsoft",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA11",
+      "title": "Samsung Galaxy Watch 5",
+      "price": {
+        "amount": 279.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Samsung",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA12",
+      "title": "Apple Watch Series 8",
+      "price": {
+        "amount": 399.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Apple",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA13",
+      "title": "Canon EOS R5 Camera",
+      "price": {
+        "amount": 3899.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Canon",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA14",
+      "title": "Sony WH-1000XM4 Headphones",
+      "price": {
+        "amount": 349.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Sony",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA15",
+      "title": "Bose QuietComfort 45",
+      "price": {
+        "amount": 329.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Bose",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA16",
+      "title": "LG OLED 55 Smart TV",
+      "price": {
+        "amount": 1499.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "LG",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA17",
+      "title": "Samsung 65 QLED TV",
+      "price": {
+        "amount": 1799.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Samsung",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA18",
+      "title": "iPhone 14 Pro",
+      "price": {
+        "amount": 999.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Apple",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA19",
+      "title": "Samsung Galaxy S23 Ultra",
+      "price": {
+        "amount": 1199.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Samsung",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA20",
+      "title": "Google Pixel 7 Pro",
+      "price": {
+        "amount": 899.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Google",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA21",
+      "title": "MacBook Air M2",
+      "price": {
+        "amount": 1199.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Apple",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA22",
+      "title": "HP Pavilion Gaming Laptop",
+      "price": {
+        "amount": 899.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "HP",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA23",
+      "title": "Logitech MX Master 3 Mouse",
+      "price": {
+        "amount": 99.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Logitech",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA24",
+      "title": "Razer DeathAdder Gaming Mouse",
+      "price": {
+        "amount": 69.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Razer",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA25",
+      "title": "Corsair K95 RGB Keyboard",
+      "price": {
+        "amount": 199.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Corsair",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA26",
+      "title": "Sofá Cama Moderno 3 Puestos",
+      "price": {
+        "amount": 899.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "MueblesCasa",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA27",
+      "title": "Mesa de Comedor 6 Puestos Roble",
+      "price": {
+        "amount": 649.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "MaderaFina",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA28",
+      "title": "Refrigerador LG 420L Inverter",
+      "price": {
+        "amount": 1299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "LG",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA29",
+      "title": "Microondas Samsung 23L Digital",
+      "price": {
+        "amount": 299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Samsung",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA30",
+      "title": "Aspiradora Robot Roomba i7+",
+      "price": {
+        "amount": 799.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "iRobot",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA31",
+      "title": "Bicicleta Trek FX 3 Hybrid",
+      "price": {
+        "amount": 899.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Trek",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA32",
+      "title": "Pesas Mancuernas Set 20kg",
+      "price": {
+        "amount": 149.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "FitnessPro",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA33",
+      "title": "Caminadora Eléctrica Plegable",
+      "price": {
+        "amount": 1299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "SportLife",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA34",
+      "title": "Balón Fútbol Adidas FIFA World Cup",
+      "price": {
+        "amount": 79.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Adidas",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA35",
+      "title": "Raqueta Tenis Wilson Pro Staff",
+      "price": {
+        "amount": 249.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Wilson",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA36",
+      "title": "Chaqueta North Face Impermeable",
+      "price": {
+        "amount": 199.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "The North Face",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA37",
+      "title": "Zapatos Nike Air Max 270",
+      "price": {
+        "amount": 159.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Nike",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA38",
+      "title": "Reloj Casio G-Shock Digital",
+      "price": {
+        "amount": 129.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Casio",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA39",
+      "title": "Bolso Michael Kors Cuero",
+      "price": {
+        "amount": 299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Michael Kors",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA40",
+      "title": "Jeans Levis 501 Original",
+      "price": {
+        "amount": 89.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Levis",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA41",
+      "title": "Libro 'Cien Años de Soledad' Tapa Dura",
+      "price": {
+        "amount": 24.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "LibreriaGlobal",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA42",
+      "title": "Puzzle 1000 Piezas Van Gogh",
+      "price": {
+        "amount": 19.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Ravensburger",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA43",
+      "title": "Guitarra Acústica Yamaha FG800",
+      "price": {
+        "amount": 399.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Yamaha",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA44",
+      "title": "Vinilo The Beatles Abbey Road",
+      "price": {
+        "amount": 34.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "VinilosClasicos",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA45",
+      "title": "Taladro Inalámbrico Bosch 18V",
+      "price": {
+        "amount": 179.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Bosch",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA46",
+      "title": "Martillo Carpintero Stanley 16oz",
+      "price": {
+        "amount": 29.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Stanley",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA47",
+      "title": "Escalera Aluminio 3 Metros",
+      "price": {
+        "amount": 149.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "HerramientasPro",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA48",
+      "title": "Kit Destornilladores 32 Piezas",
+      "price": {
+        "amount": 39.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "ToolMaster",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA49",
+      "title": "Perfume Chanel No. 5 100ml",
+      "price": {
+        "amount": 149.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Chanel",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA50",
+      "title": "Crema Facial L'Oréal Anti-Edad",
+      "price": {
+        "amount": 29.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "L'Oréal",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA51",
+      "title": "Shampoo Pantene Pro-V 400ml",
+      "price": {
+        "amount": 12.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Pantene",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA52",
+      "title": "Máquina Afeitar Philips S9000",
+      "price": {
+        "amount": 299.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Philips",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA53",
+      "title": "Aceite Motor Castrol GTX 5W-30",
+      "price": {
+        "amount": 45.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Castrol",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA54",
+      "title": "Filtro Aire Toyota Corolla",
+      "price": {
+        "amount": 19.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "AutoPartes",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA55",
+      "title": "Batería Auto 12V 75Ah",
+      "price": {
+        "amount": 129.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "PowerBat",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA56",
+      "title": "Llantas Michelin 205/55 R16",
+      "price": {
+        "amount": 249.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Michelin",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA57",
+      "title": "Comida Perro Royal Canin 15kg",
+      "price": {
+        "amount": 89.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Royal Canin",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA58",
+      "title": "Arena Gato Aglomerante 10kg",
+      "price": {
+        "amount": 24.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "PetCare",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA59",
+      "title": "Juguete Perro Kong Classic",
+      "price": {
+        "amount": 19.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "Kong",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA60",
+      "title": "Acuario 100L con Filtro",
+      "price": {
+        "amount": 199.99,
+        "currency": "COL"
+      },
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_952892-MLA82578193512_032025-O.webp",
+      "condition": "new",
+      "seller": "AquaWorld",
+      "free_shipping": true
     }
   ],
-  "categories": ["Electrónica", "Celulares y Smartphones"]
+  "categories": [
+    "Electrónica",
+    "Celulares y Smartphones",
+    "Hogar y Muebles",
+    "Deportes y Fitness",
+    "Moda y Accesorios",
+    "Libros y Entretenimiento",
+    "Herramientas y Construcción",
+    "Belleza y Cuidado Personal",
+    "Automotor",
+    "Mascotas"
+  ]
 }

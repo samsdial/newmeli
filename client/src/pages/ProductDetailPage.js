@@ -28,9 +28,13 @@ function ProductDetailPage() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="product-detail-page">
-      <Breadcrumb categories={product.category_path_from_root} />
-      <ProductDetail product={product} />
+    <div className="container">
+      <div className="container-search">
+      <section className="container-search__results">
+        <Breadcrumb categories={product.category_path_from_root} />
+        <ProductDetail product={product} />
+      </section>
+      </div>
     </div>
   );
 }
