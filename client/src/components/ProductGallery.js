@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 const ProductGallery = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log("items;", items);
-
   return (
     <div className="gallery">
       <div className="gallery__thumbnails">

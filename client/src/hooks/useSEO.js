@@ -10,18 +10,16 @@ export const useSEO = ({
   siteName = "Mercado Libre",
 }) => {
   useEffect(() => {
-    // Actualizar title
     if (title) {
       document.title = title;
     }
 
-    // Meta tags básicas
     const metaTags = [
       { name: "description", content: description },
       { name: "keywords", content: keywords },
       { name: "robots", content: "index, follow" },
 
-      // Open Graph
+
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:image", content: image },
@@ -29,14 +27,13 @@ export const useSEO = ({
       { property: "og:type", content: type },
       { property: "og:site_name", content: siteName },
 
-      // Twitter Cards
+
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: image },
     ];
 
-    // Crear o actualizar meta tags
     metaTags.forEach(({ name, property, content }) => {
       if (!content) return;
 

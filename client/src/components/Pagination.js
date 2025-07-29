@@ -3,15 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 
 const Pagination = ({ currentPage, totalPages, searchQuery }) => {
   const location = useLocation();
-
-  // Generar URL para una página específica
   const generatePageUrl = (page) => {
     const searchParams = new URLSearchParams(location.search);
     searchParams.set("page", page);
     return `${location.pathname}?${searchParams.toString()}`;
   };
 
-  // Generar array de números de página a mostrar
   const getPageNumbers = () => {
     const pages = [];
     const maxPagesToShow = 10;
@@ -19,7 +16,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
     let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
     let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
 
-    // Ajustar inicio si no hay suficientes páginas al final
     if (endPage - startPage + 1 < maxPagesToShow) {
       startPage = Math.max(1, endPage - maxPagesToShow + 1);
     }
@@ -45,7 +41,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
         </div>
 
         <ul className="pagination__list">
-          {/* Botón anterior */}
           {!isFirstPage && (
             <li className="pagination__item">
               <Link
@@ -58,7 +53,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
             </li>
           )}
 
-          {/* Primera página si no está visible */}
           {pageNumbers[0] > 1 && (
             <>
               <li className="pagination__item">
@@ -74,7 +68,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
             </>
           )}
 
-          {/* Números de página */}
           {pageNumbers.map((page) => (
             <li key={page} className="pagination__item">
               {page === currentPage ? (
@@ -89,7 +82,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
             </li>
           ))}
 
-          {/* Última página si no está visible */}
           {pageNumbers[pageNumbers.length - 1] < totalPages && (
             <>
               {pageNumbers[pageNumbers.length - 1] < totalPages - 1 && (
@@ -108,7 +100,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
             </>
           )}
 
-          {/* Botón siguiente */}
           {!isLastPage && (
             <li className="pagination__item">
               <Link
@@ -122,7 +113,6 @@ const Pagination = ({ currentPage, totalPages, searchQuery }) => {
           )}
         </ul>
 
-        {/* Navegación rápida */}
         <div className="pagination__quick-nav">
           <span>Ir a: </span>
           <Link

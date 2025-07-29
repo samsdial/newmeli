@@ -1,4 +1,3 @@
-// Pagination component styles using BEM methodology
 .pagination {
   margin: 3rem 0;
   
@@ -204,7 +203,6 @@
   }
 }
 
-// Dark mode support (if needed in the future)
 @media (prefers-color-scheme: dark) {
   .pagination {
     &__link {
