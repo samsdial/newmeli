@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import ProductList from "../components/ProductList";
+import { getApiUrl } from "../utils/api";
 
 const SearchResultsPage = () => {
   const location = useLocation();
@@ -19,8 +20,8 @@ const SearchResultsPage = () => {
     setError(null);
 
     const apiUrl = query.trim()
-      ? `/api/items?q=${query}&page=${page}`
-      : `/api/items?page=${page}`;
+      ? getApiUrl(`/api/items?q=${query}&page=${page}`)
+      : getApiUrl(`/api/items?page=${page}`);
 
     axios
       .get(apiUrl)

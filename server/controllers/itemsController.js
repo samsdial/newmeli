@@ -11,25 +11,15 @@ const mockItemDetailsPath = path.join(
 const searchItems = async (req, res) => {
   try {
     const { q: query, page = 1 } = req.query;
-    const itemsPerPage = 10; // Cambiar de 4 a 10 items por página
+    const itemsPerPage = 10;
     const currentPage = parseInt(page, 10);
-    const offset = (currentPage - 1) * itemsPerPage;
 
-    console.log("Backend received:", {
-      query,
-      page,
-      currentPage,
-      itemsPerPage,
-    }); // Debug
 
     setTimeout(() => {
       try {
         const mockData = JSON.parse(fs.readFileSync(mockDataPath));
         const allItems = mockData.items || [];
 
-        console.log("Total items in mock data:", allItems.length); // Debug
-
-        // Simular filtrado por query si se proporciona y no está vacía
         let filteredItems = allItems;
         if (query && query.trim() !== "") {
           filteredItems = allItems.filter(
@@ -37,17 +27,10 @@ const searchItems = async (req, res) => {
               item.title.toLowerCase().includes(query.toLowerCase()) ||
               item.seller.toLowerCase().includes(query.toLowerCase())
           );
-          console.log(
-            "Filtered items for query:",
-            query,
-            "→",
-            filteredItems.length
-          ); // Debug
         } else {
-          console.log("No query provided, showing all items"); // Debug
+          console.log("No query provided, showing all items");
         }
 
-        // Calcular paginación
         const totalItems = filteredItems.length;
         const totalPages = Math.max(1, Math.ceil(totalItems / itemsPerPage));
         const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages);
@@ -65,9 +48,8 @@ const searchItems = async (req, res) => {
           validOffset,
           paginatedItemsCount: paginatedItems.length,
           mathCeilCheck: Math.ceil(totalItems / itemsPerPage),
-        }); // Debug mejorado
+        });
 
-        // Formatear respuesta con información de paginación (siempre incluida)
         const response = {
           items: paginatedItems,
           categories: mockData.categories || [],
@@ -84,10 +66,9 @@ const searchItems = async (req, res) => {
           },
         };
 
-        console.log("Sending response pagination:", response.pagination); // Debug
         res.json(response);
       } catch (fileError) {
-        console.error("Error reading mock data:", fileError);
+
         res.status(500).json({
           error: "Error reading data",
           items: [],
